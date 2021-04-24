@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tabindex</title>
+</head>
+<body>
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <div tabindex="0">2.5</div>
+    <input type="text" value="3">
+    <input type="text" value="4" tabindex="-1">
+    <input type="text" value="5">
+    <!-- 탭키를 눌렀을때 이동 순서를 정함 
+         순차적으로 1,2,3,4... 순으로 해야함 -1은 제외함  -->
+</body>
+</html>
