@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>select,option,optgroup,datalist</title>
+</head>
+<body>
+    <select name="fruits">
+        <optgroup label="first">
+            <option label="1" value="1"></option>
+            <option>2</option>
+            <option selected>3</option>
+        </optgroup>
+        <optgroup label="second">
+            <option>4</option>
+            <option>5</option>
+        </optgroup>
+    </select>
+
+
+    <input type="text" list="fruits">
+
+    <datalist id="fruits">
+        <option>Apple</option>
+        <option>Orange</option>
+        <option>Banana</option>
+        <option>Mango</option>
+        <option>Fineapple</option>
+    </datalist>
+</body>
+</html>
