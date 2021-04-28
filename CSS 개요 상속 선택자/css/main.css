@@ -1,0 +1,97 @@
+a:hover {
+    font-weight: bold;
+    font-size: 20px;
+    color:red;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+}
+.box:hover {
+    width:200px;
+}
+.box2 {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+}
+.box2:active {
+    width: 200px;
+    background: yellowgreen;
+}
+input {
+    width: 100px;
+    outline: none;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    transition: 0.4;
+}
+input:focus {
+    border-color: red;
+    width: 200px;
+}
+
+/* first last child */
+.num li:first-child {
+    color: red;
+}
+.num2 li:last-child {
+    color: red;
+}
+
+/*nth child*/
+.num3 :nth-child(n+2) {
+    color: red;
+}
+
+/*nth of type*/
+.num4 p:nth-of-type(1) {
+    color: red;
+}
+.num5 .red:nth-of-type(4) {
+    color: red;
+}
+.num6 li:not(.two){
+    color: red
+}
+
+/* 가상요소 before*/
+ul {
+    font-size: 40px;
+}
+
+ul li::before {
+    content: "숫자"; /*before에서 content는 필수!*/
+    font-weight: bold;
+    color: red;
+    margin-right: 20px;
+}
+
+/* 가상요소 after*/  
+ul li::after {
+    content: url(https://heropy.blog/css/images/logo.png);
+    color: blue;
+}
+
+/*속성 선택자 attr,attr=value*/
+[disabled] {
+    opacity: 0.2;
+    color: red;
+}
+
+[type="password"] {
+    opacity: 0.2;
+    color: red;
+}
+
+/*attr^=value 속성값이 value로 시작되는 요소 선택*/
+[class^="btn-"]{
+    font-weight: bold;
+    border-radius: 20px;
+}
+/*attr$=value 속성값이 value로 끝나는 요소 선택*/
+[class$="success"]{
+    color: red;
+}
