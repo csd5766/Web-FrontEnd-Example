@@ -1,0 +1,41 @@
+/* width,height */
+div {
+    width: auto;
+    /* width 초기값 100% */
+    height: 100px; 
+    /* height는 초기값 0 */
+    background: tomato;
+}
+
+span {
+    /* 인라인 요소는 텍스트에 따라 크기가 지정됨 */
+    width: 100px;
+    /* inline요소는 width 초기값 0 적용 x */
+    height: 100px; 
+    /* inline요소는 height는 초기값 0 적용 x */
+    background: tomato;
+}
+
+/* max,min width/height */
+.parent {
+    width: 400px;
+    height: 200px;
+    border: 4px solid tomato;
+    /* margin: 20px; */
+}
+.child {
+    width: 100px;
+    height: 100px;
+    /* max-width: 400px;
+    min-width: 200px; */
+    border: 4px solid;
+    margin: 50%;
+    background: orange;
+}
+
+/* border */
+.box {
+    width : 400px;
+    height: 300px;
+    border: 10px dotted transparent;
+}

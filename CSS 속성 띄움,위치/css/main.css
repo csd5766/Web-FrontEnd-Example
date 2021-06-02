@@ -1,0 +1,97 @@
+article {
+
+}
+
+article .picture {
+    width: 200px;
+    height: 150px;
+    background: tomato;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+article .text {
+    clear: left;
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    float: right;
+
+}
+.box4 {
+    width: 200px;
+    height: 150px;
+    background: orange;
+    clear: both;
+}
+/* 제일 좋은 clear 사용 방법  */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float-box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    margin: 10px;
+    float: left;
+}
+
+.new-box {
+    width: 250px;
+    height: 250px;
+    background: red;
+}
+
+/* float이 추가된 요소는 block요소로 대부분 바뀐다. */
+span {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: tomato;
+    float: left;
+}
+
+.parent {
+    width: 400px;
+    height: 300px;
+    border: 4px dashed lightgray;
+}
+
+.child {
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    border: 4px dashed red;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+
+.relative-box {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border: 4px dashed red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.relative {
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
