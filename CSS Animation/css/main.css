@@ -67,3 +67,111 @@
       width: 500px;
     }
   }
+
+  /* animation interation-count, direction */
+  .box06 {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+    margin: 30px;
+    animation: movemove 2s;
+  /*  움직이는 속도  */
+    animation-timing-function: linear;
+  /*  도는 횟수  */
+    animation-iteration-count: infinite;
+  /*  역방향 정방향 ...  */
+    animation-direction: reverse;
+  }
+  
+  @keyframes movemove {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(100px, 0);
+    }
+    50% {
+      transform: translate(100px, 100px);
+    }
+    75% {
+      transform: translate(0, 100px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* animation fill-mode */
+  .box07 {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+    margin: 30px;
+    animation: movemove 2s 2s;
+    /* 애니메이션 전후 지정 속성 */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes movemove {
+    0% {
+      transform: translate(100px, 100px);
+      background: dodgerblue;
+    }
+   
+    100% {
+      transform: translate(300px, 100px);
+      background: yellowgreen;
+    }
+  }
+
+  /* play state */
+
+
+  body {
+    padding: 20px;
+  }
+  .box08 {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+    animation: size-up 3s linear infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box08::before{
+    content: "running";
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .box08:hover {
+    animation-play-state: paused;
+    background: red;
+  }
+  
+  .box08:hover::before {
+    content: "paused";
+  }
+  
+  @keyframes size-up {
+    0% {
+      width: 150px;
+    }
+   
+    100% {
+      width: 100%;
+    }
+  }
+
+  /* multi columns */
+  p {
+    columns: 150px 3;
+    column-gap: 20px;
+  /*  column의 선색상은 color의 영향 을 받기 때문에 따로 설정을 해줘야 영향을 안받음  */
+    column-rule: 2px solid;
+  }
