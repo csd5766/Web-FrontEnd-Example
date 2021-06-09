@@ -24,3 +24,145 @@
   border: 4px dashed red;
   border-radius: 10px;
 }
+
+/* align-content */
+.container03 {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  /* stretch(item height auto or 없음으로),flex-start,flex-end,center
+  ,space-between,space-around */
+  align-content: space-around;
+}
+.container03 .item {
+  width: 120px;
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+
+
+/* align items */
+.container4 {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.container4 .item {
+  width: 120px;
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .container4 .item:nth-child(2) {
+  font-size: 50px;
+} */
+
+
+/* order -1 , 0 , 1 값으로 순서대로
+ 동일한 값일 경우 html의 순서대로 적용 */
+
+ .container5 {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.container5 .item {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container5 .item1 {
+  order: 1;
+}
+.container5 .item4 {
+  order: 1;
+}
+.container5 .item6 {
+  order: -1;
+}
+
+/* flex-grow 
+   flex: 1 1 0 (grow shrink basis 순으로 기본값이 설정됨)*/
+.container6 {
+  border: 4px solid;
+  display: flex;
+}
+
+.container6 .item {
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+/* flex-grow의 값에 따라 너비를 설정함 가변할때 유용하고 가변하지 않을려면 고정 px로 함 */
+.container6 .item1 {
+  flex-grow: 1;
+}
+.container6 .item2 {
+  flex-grow: 2;
+}
+.container6 .item3 {
+  width: 100px;
+}
+
+/* flex-basis item의 공간 배분전 기본 너비를 설정 */
+.container7 { 
+  border: 4px solid;
+  display: flex;
+}
+.container7 .item {
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+.container7 .item3 {
+  flex-grow: 2;
+}
+
+
+/* align-self */
+.container8 { 
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.container8 .item {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+}
+.container8 .item3 {
+  align-self: center;
+}
+.container8 .item4 {
+  align-self: flex-start;
+}
+.container8 .item5 {
+  align-self: stretch;
+  height: auto;
+}
